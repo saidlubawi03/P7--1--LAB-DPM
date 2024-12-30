@@ -58,11 +58,7 @@ const ProfileScreen = () => {
 
     return (
         <PaperProvider>
-            <ImageBackground
-                source={require('@/assets/images/favicon1.png')} 
-                style={styles.container}
-                resizeMode="cover"
-            >
+            <ImageBackground style={styles.container} resizeMode="cover">
                 <ThemedView style={styles.contentContainer}>
                     {profile ? (
                         <View style={styles.profileContainer}>
@@ -108,70 +104,97 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#F0F4F8',
     },
     container: {
         flex: 1,
-        justifyContent: 'center', 
+        justifyContent: 'center',
+        backgroundColor: 'linear-gradient(to bottom, #87CEEB, #FFFFFF)', // Biru langit dan putih
     },
     contentContainer: {
         flex: 1,
-        padding: 20,
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', 
+        padding: 24,
+        backgroundColor: 'rgba(255, 255, 255, 0.9)', // Putih transparan
         marginHorizontal: 20,
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: 16,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.2,
+        shadowOpacity: 0.3,
         shadowRadius: 6,
-        elevation: 5, // For Android shadow
+        elevation: 8,
     },
     profileContainer: {
         alignItems: 'center',
         width: '100%',
+        marginBottom: 24,
+        backgroundColor: '#87CEEB', // Biru langit
+        borderRadius: 16,
+        padding: 20,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.1,
+        shadowRadius: 8,
+        elevation: 6,
     },
     header: {
         alignItems: 'center',
-        marginBottom: 20,
+        marginBottom: 24,
     },
     username: {
-        fontSize: 26,
+        fontSize: 32,
         fontWeight: 'bold',
-        color: '#333',
+        color: '#ffffff', // Putih untuk teks username
+        textShadowColor: 'rgba(0, 0, 0, 0.2)',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 3,
     },
     email: {
         fontSize: 18,
-        color: '#666',
+        color: '#FFFFFF', // Putih untuk email
         marginTop: 8,
     },
     infoCard: {
         width: '100%',
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        padding: 18,
+        backgroundColor: '#ffffff', // Putih
+        borderRadius: 12,
+        padding: 20,
         marginBottom: 16,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
-        shadowRadius: 4,
-        elevation: 3, 
+        shadowRadius: 6,
+        elevation: 4,
+        borderLeftWidth: 5,
+        borderLeftColor: '#87CEEB', // Biru langit untuk aksen kiri
     },
     label: {
         fontSize: 14,
-        color: '#888',
-        marginBottom: 6,
+        color: '#7F8C8D',
+        marginBottom: 4,
     },
     value: {
         fontSize: 18,
         fontWeight: '600',
-        color: '#333',
+        color: '#2C3E50',
     },
     logoutButton: {
-        marginTop: 24,
-        backgroundColor: '#ff5252',
-        borderRadius: 25,
-        paddingVertical: 10,
-        paddingHorizontal: 20,
+        marginTop: 32,
+        backgroundColor: '#E74C3C', // Merah untuk tombol logout
+        borderRadius: 30,
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.15,
+        shadowRadius: 4,
+        elevation: 6,
+    },
+    logoutButtonText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#ffffff', // Putih untuk teks tombol
     },
 });
 
